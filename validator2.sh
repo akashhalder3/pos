@@ -95,12 +95,12 @@ $PRYSM_BEACON_BINARY \
 
 sleep 5
 
-# Start prysm validator for this node. Each validator node will manage 1 validator
-# $PRYSM_VALIDATOR_BINARY \
-#       --beacon-rpc-provider=localhost:$PRYSM_BEACON_RPC_PORT \
-#       --datadir=$NODE_DIR/consensus/validatordata \
-#       --accept-terms-of-use \
-#       --interop-num-validators=$NUM_NODES \
-#       --interop-start-index=0 \
-#       --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
+Start prysm validator for this node. Each validator node will manage 1 validator
+$PRYSM_VALIDATOR_BINARY \
+      --beacon-rpc-provider=localhost:$PRYSM_BEACON_RPC_PORT \
+      --datadir=$NODE_DIR/consensus/validatordata \
+      --accept-terms-of-use \
+      --interop-num-validators=$NUM_NODES \
+      --interop-start-index=0 \
+      --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
 done
