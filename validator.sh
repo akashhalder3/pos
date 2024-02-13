@@ -6,6 +6,7 @@ set -o pipefail
 # NETWORK_DIR is where all files for the testnet will be stored,
 # including logs and storage
 NETWORK_DIR=./network
+NODE_DIR=$NETWORK_DIR/node0
 
 # Change this number for your desired number of nodes
 NUM_NODES=64
