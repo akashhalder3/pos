@@ -71,7 +71,7 @@ sleep 5
 # Start prysm consensus client for this node
 $PRYSM_BEACON_BINARY \
       --datadir=$NODE_DIR/consensus/beacondata \
-      --min-sync-peers=1 \
+      --min-sync-peers=0 \
       --genesis-state=$NODE_DIR/consensus/genesis.ssz \
       --bootstrap-node=$PRYSM_BOOTSTRAP_NODE \
       --interop-eth1data-votes \
