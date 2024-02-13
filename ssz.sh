@@ -98,9 +98,9 @@ cp $NETWORK_DIR/genesis.json $NODE_DIR/execution/genesis.json
 $GETH_BINARY account new --datadir "$NODE_DIR/execution" --password "$geth_pw_file"
 
 # Initialize geth for this node. Geth uses the genesis.json to write some initial state
-# $GETH_BINARY init \
-#       --datadir=$NODE_DIR/execution \
-#       $NODE_DIR/execution/genesis.json
+$GETH_BINARY init \
+      --datadir=$NODE_DIR/execution \
+      $NODE_DIR/execution/genesis.json
 
 # Start geth execution client for this node
 # $GETH_BINARY \
