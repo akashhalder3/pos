@@ -7,6 +7,13 @@ set -o pipefail
 # including logs and storage
 NETWORK_DIR=./network
 NODE_DIR=$NETWORK_DIR/node0
+# We use an empty password. Do not do this in production
+geth_pw_file="$NODE_DIR/geth_password.txt"
+echo "" > "$geth_pw_file"
+
+# The prysm bootstrap node is set after the first loop, as the first
+# node is the bootstrap node. This is used for consensus client discovery
+PRYSM_BOOTSTRAP_NODE=
 
 # Change this number for your desired number of nodes
 NUM_NODES=64
