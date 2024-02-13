@@ -13,7 +13,7 @@ echo "" > "$geth_pw_file"
 
 # The prysm bootstrap node is set after the first loop, as the first
 # node is the bootstrap node. This is used for consensus client discovery
-PRYSM_BOOTSTRAP_NODE=
+PRYSM_BOOTSTRAP_NODE=enr:-MK4QLyoooMIHzV6vhlVF3bGko8dGTgRyB_1HCKI4zMi3SgCNE-zgXc6y5apG59rN4az0LQpxZOAJOMEMG-fKbMmPwuGAY2hmnj0h2F0dG5ldHOIAAAAwAAAAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQMTfBWpFvTY0PO1Obu5cOLKnoRZF9G7-4pMveu1-6QuZ4hzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
 
 # Change this number for your desired number of nodes
 NUM_NODES=64
