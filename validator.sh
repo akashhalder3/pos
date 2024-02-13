@@ -52,7 +52,7 @@ mkdir -p $NETWORK_DIR
 
 # Set Paths for your binaries. Configure as you wish, particularly
 # if you're developing on a local fork of geth/prysm
-GETH_BINARY=/user/bin/geth
+GETH_BINARY=/usr/bin/geth
 GETH_BOOTNODE_BINARY=./dependencies/go-ethereum/build/bin/bootnode
 PRYSM_CTL_BINARY=./dependencies/prysm/out/prysmctl
 PRYSM_BEACON_BINARY=./dependencies/prysm/out/beacon-chain
