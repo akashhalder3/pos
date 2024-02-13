@@ -45,14 +45,14 @@ trap 'cleanup' SIGINT
 # Reset the data from any previous runs and kill any hanging runtimes
 rm -rf "$NETWORK_DIR" || echo "no network directory"
 mkdir -p $NETWORK_DIR
-# pkill geth || echo "No existing geth processes"
-# pkill beacon-chain || echo "No existing beacon-chain processes"
-# pkill validator || echo "No existing validator processes"
-# pkill bootnode || echo "No existing bootnode processes"
+pkill geth || echo "No existing geth processes"
+pkill beacon-chain || echo "No existing beacon-chain processes"
+pkill validator || echo "No existing validator processes"
+pkill bootnode || echo "No existing bootnode processes"
 
 # Set Paths for your binaries. Configure as you wish, particularly
 # if you're developing on a local fork of geth/prysm
-GETH_BINARY=/usr/bin/geth
+GETH_BINARY=/user/bin/geth
 GETH_BOOTNODE_BINARY=./dependencies/go-ethereum/build/bin/bootnode
 PRYSM_CTL_BINARY=./dependencies/prysm/out/prysmctl
 PRYSM_BEACON_BINARY=./dependencies/prysm/out/beacon-chain
@@ -98,11 +98,11 @@ cp $NETWORK_DIR/genesis.json $NODE_DIR/execution/genesis.json
 $GETH_BINARY account new --datadir "$NODE_DIR/execution" --password "$geth_pw_file"
 
 # Initialize geth for this node. Geth uses the genesis.json to write some initial state
-# $GETH_BINARY init \
-#       --datadir=$NODE_DIR/execution \
-#       $NODE_DIR/execution/genesis.json
+$GETH_BINARY init \
+      --datadir=$NODE_DIR/execution \
+      $NODE_DIR/execution/genesis.json
 
-# # Start geth execution client for this node
+# Start geth execution client for this node
 # $GETH_BINARY \
 #       --networkid=${CHAIN_ID:-32382} \
 #       --http \
@@ -156,4 +156,4 @@ $GETH_BINARY account new --datadir "$NODE_DIR/execution" --password "$geth_pw_fi
 #       --interop-num-validators=$NUM_NODES \
 #       --interop-start-index=0 \
 #       --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
-done
+# done
