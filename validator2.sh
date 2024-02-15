@@ -13,7 +13,7 @@ echo "" > "$geth_pw_file"
 
 # The prysm bootstrap node is set after the first loop, as the first
 # node is the bootstrap node. This is used for consensus client discovery
-PRYSM_BOOTSTRAP_NODE=enr:-MK4QEMiDYKwhi_j6BgZZyZHIjL7pawQWzpJWsTPw5CMpI_WFwYWbpioybSPlD_wxL5sG52Ov2WbVBhsTEfp7kDeDfqGAY2hmnj1h2F0dG5ldHOIAAAAAGAAAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQMTfBWpFvTY0PO1Obu5cOLKnoRZF9G7-4pMveu1-6QuZ4hzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
+PRYSM_BOOTSTRAP_NODE=enr:-MK4QN5RQWM8VTdJBOQVqwvBzw2QSyGHZ-gHq4zkG623p_P9YdgXQWItoxtrzEqXcjJ-EV_8Q4kRNneVNlbH4G75On2GAY2ruh-Uh2F0dG5ldHOIAAAAAAwAAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQPNrzAH33Qoxl19zc60uuFriQqvgKi0htG5hu8y5axDRIhzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
 
 # Change this number for your desired number of nodes
 NUM_NODES=64
@@ -95,12 +95,12 @@ $PRYSM_BEACON_BINARY \
 
 sleep 5
 
-Start prysm validator for this node. Each validator node will manage 1 validator
-$PRYSM_VALIDATOR_BINARY \
-      --beacon-rpc-provider=localhost:$PRYSM_BEACON_RPC_PORT \
-      --datadir=$NODE_DIR/consensus/validatordata \
-      --accept-terms-of-use \
-      --interop-num-validators=$NUM_NODES \
-      --interop-start-index=0 \
-      --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
+# Start prysm validator for this node. Each validator node will manage 1 validator
+# $PRYSM_VALIDATOR_BINARY \
+#       --beacon-rpc-provider=localhost:$PRYSM_BEACON_RPC_PORT \
+#       --datadir=$NODE_DIR/consensus/validatordata \
+#       --accept-terms-of-use \
+#       --interop-num-validators=$NUM_NODES \
+#       --interop-start-index=0 \
+#       --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
 done
