@@ -7,6 +7,9 @@ set -o pipefail
 # including logs and storage
 NETWORK_DIR=./network
 NODE_DIR=$NETWORK_DIR/node0
+mkdir -p $NODE_DIR/execution
+mkdir -p $NODE_DIR/consensus
+mkdir -p $NODE_DIR/logs
 
 # Reset the data from any previous runs and kill any hanging runtimes
 rm -rf "$NETWORK_DIR" || echo "no network directory"
@@ -66,6 +69,11 @@ GETH_BOOTNODE_BINARY=./dependencies/go-ethereum/build/bin/bootnode
 PRYSM_CTL_BINARY=./dependencies/prysm/out/prysmctl
 PRYSM_BEACON_BINARY=./dependencies/prysm/out/beacon-chain
 PRYSM_VALIDATOR_BINARY=./dependencies/prysm/out/validator
+
+# Copy the same genesis and inital config the node's directories
+cp ./config.yml $NODE_DIR/consensus/config.yml
+cp $NETWORK_DIR/genesis.ssz $NODE_DIR/consensus/genesis.ssz
+cp $NETWORK_DIR/genesis.json $NODE_DIR/execution/genesis.json
 
 # Start geth execution client for this node
 # $GETH_BINARY \
