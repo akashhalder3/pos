@@ -8,6 +8,7 @@ set -o pipefail
 NETWORK_DIR=./network
 NODE_DIR=$NETWORK_DIR/node0
 # We use an empty password. Do not do this in production
+touch $NODE_DIR/geth_password.txt
 geth_pw_file="$NODE_DIR/geth_password.txt"
 echo "" > "$geth_pw_file"
 
