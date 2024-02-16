@@ -3,6 +3,11 @@
 set -exu
 set -o pipefail
 
+# NETWORK_DIR is where all files for the testnet will be stored,
+# including logs and storage
+NETWORK_DIR=./network
+NODE_DIR=$NETWORK_DIR/node0
+
 # Reset the data from any previous runs and kill any hanging runtimes
 rm -rf "$NETWORK_DIR" || echo "no network directory"
 mkdir -p $NETWORK_DIR
@@ -10,11 +15,6 @@ pkill geth || echo "No existing geth processes"
 pkill beacon-chain || echo "No existing beacon-chain processes"
 pkill validator || echo "No existing validator processes"
 pkill bootnode || echo "No existing bootnode processes"
-
-# NETWORK_DIR is where all files for the testnet will be stored,
-# including logs and storage
-NETWORK_DIR=./network
-NODE_DIR=$NETWORK_DIR/node0
 # We use an empty password. Do not do this in production
 geth_pw_file="$NODE_DIR/geth_password.txt"
 echo "" > "$geth_pw_file"
