@@ -57,13 +57,13 @@ rm -rf "$NETWORK_DIR" || echo "no network directory"
 mkdir -p $NETWORK_DIR
 pkill geth || echo "No existing geth processes"
 pkill beacon-chain || echo "No existing beacon-chain processes"
-# pkill validator || echo "No existing validator processes"
+pkill validator || echo "No existing validator processes"
 pkill bootnode || echo "No existing bootnode processes"
 
 # Set Paths for your binaries. Configure as you wish, particularly
 # if you're developing on a local fork of geth/prysm
 GETH_BINARY=/usr/bin/geth
-GETH_BOOTNODE_BINARY=./dependencies/go-ethereum/build/bin/bootnode
+GETH_BOOTNODE_BINARY=/usr/bin/bootnode
 
 PRYSM_CTL_BINARY=./dependencies/prysm/bazel-bin/cmd/prysmctl/prysmctl_/prysmctl
 PRYSM_BEACON_BINARY=./dependencies/prysm/bazel-bin/cmd/beacon-chain/beacon-chain_/beacon-chain
@@ -73,7 +73,7 @@ PRYSM_VALIDATOR_BINARY=./dependencies/prysm/bazel-bin/cmd/validator/validator_/v
 # Not a production grade bootnode. Does not do peer discovery for consensus client
 mkdir -p $NETWORK_DIR/bootnode
 
-$GETH_BOOTNODE_BINARY -genkey $NETWORK_DIR/bootnode/nodekey
+# $GETH_BOOTNODE_BINARY -genkey $NETWORK_DIR/bootnode/nodekey
 
 $GETH_BOOTNODE_BINARY \
     -nodekey $NETWORK_DIR/bootnode/nodekey \
