@@ -3,6 +3,14 @@
 set -exu
 set -o pipefail
 
+# Reset the data from any previous runs and kill any hanging runtimes
+rm -rf "$NETWORK_DIR" || echo "no network directory"
+mkdir -p $NETWORK_DIR
+pkill geth || echo "No existing geth processes"
+pkill beacon-chain || echo "No existing beacon-chain processes"
+pkill validator || echo "No existing validator processes"
+pkill bootnode || echo "No existing bootnode processes"
+
 # NETWORK_DIR is where all files for the testnet will be stored,
 # including logs and storage
 NETWORK_DIR=./network
@@ -48,14 +56,6 @@ cleanup() {
 
 # Trap the SIGINT signal and call the cleanup function when it's caught
 trap 'cleanup' SIGINT
-
-# Reset the data from any previous runs and kill any hanging runtimes
-rm -rf "$NETWORK_DIR" || echo "no network directory"
-mkdir -p $NETWORK_DIR
-pkill geth || echo "No existing geth processes"
-pkill beacon-chain || echo "No existing beacon-chain processes"
-pkill validator || echo "No existing validator processes"
-pkill bootnode || echo "No existing bootnode processes"
 
 # Create the bootnode for execution client peer discovery. 
 # Not a production grade bootnode. Does not do peer discovery for consensus client
