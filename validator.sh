@@ -57,7 +57,7 @@ rm -rf "$NETWORK_DIR" || echo "no network directory"
 mkdir -p $NETWORK_DIR
 pkill geth || echo "No existing geth processes"
 pkill beacon-chain || echo "No existing beacon-chain processes"
-pkill validator || echo "No existing validator processes"
+# pkill validator || echo "No existing validator processes"
 pkill bootnode || echo "No existing bootnode processes"
 
 # Set Paths for your binaries. Configure as you wish, particularly
