@@ -13,7 +13,7 @@ echo "" > "$geth_pw_file"
 
 # The prysm bootstrap node is set after the first loop, as the first
 # node is the bootstrap node. This is used for consensus client discovery
-PRYSM_BOOTSTRAP_NODE=enr:-MK4QB5TKsQR9Q-ZbdBd7WyjzD13muwtW41EFmXBnEwmZCYKdOEykZm5O_VwLK2fhOT0LX4BYgvYT2vyIvf3VrDDmDqGAY2s_4SKh2F0dG5ldHOIAAAAAAAMAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQKF2HWxFPvQBK0LU3q-67vcuwZj3SH8e0caR2bs6DHZ34hzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
+PRYSM_BOOTSTRAP_NODE=enr:-MK4QK-P_X6UJq0PB372ylAQFIj78xkp3aCrlhz8Ws-J3TWJMaz7JVk9stUv0wD-AajBN_Y4dA4gpN_xL-Z0UB0TsQyGAY2wnyoEh2F0dG5ldHOIAAAAAAAwAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQLbyVMwJqKaDz7Wz9wsICvxBk8j3keBYnSQjRzacKGgSohzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
 # Change this number for your desired number of nodes
 NUM_NODES=64
 
@@ -36,6 +36,30 @@ PRYSM_BEACON_MONITORING_PORT=4400
 PRYSM_VALIDATOR_RPC_PORT=7000
 PRYSM_VALIDATOR_GRPC_GATEWAY_PORT=7100
 PRYSM_VALIDATOR_MONITORING_PORT=7200
+
+trap 'echo "Error on line $LINENO"; exit 1' ERR
+
+# Function to handle the cleanup
+cleanup() {
+    echo "Caught Ctrl+C. Killing active background processes and exiting."
+    kill $(jobs -p)  # Kills all background processes started in this script
+    exit
+}
+
+# Trap the SIGINT signal and call the cleanup function when it's caught
+trap 'cleanup' SIGINT
+
+# Reset the data from any previous runs and kill any hanging runtimes
+rm -rf "$NETWORK_DIR" || echo "no network directory"
+mkdir -p $NETWORK_DIR
+pkill geth || echo "No existing geth processes"
+pkill beacon-chain || echo "No existing beacon-chain processes"
+pkill validator || echo "No existing validator processes"
+pkill bootnode || echo "No existing bootnode processes"
+
+# Create the bootnode for execution client peer discovery. 
+# Not a production grade bootnode. Does not do peer discovery for consensus client
+mkdir -p $NETWORK_DIR/bootnode
 
 # Set Paths for your binaries. Configure as you wish, particularly
 # if you're developing on a local fork of geth/prysm
@@ -102,5 +126,5 @@ $PRYSM_VALIDATOR_BINARY \
       --interop-num-validators=$NUM_NODES \
       --interop-start-index=0 \
       --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
-done
+
 

@@ -103,4 +103,3 @@ $PRYSM_VALIDATOR_BINARY \
       --interop-num-validators=$NUM_NODES \
       --interop-start-index=0 \
       --chain-config-file=$NODE_DIR/consensus/config.yml > "$NODE_DIR/logs/validator.log" 2>&1 &
-done
