@@ -55,10 +55,10 @@ trap 'cleanup' SIGINT
 # Reset the data from any previous runs and kill any hanging runtimes
 rm -rf "$NETWORK_DIR" || echo "no network directory"
 mkdir -p $NETWORK_DIR
-# pkill geth || echo "No existing geth processes"
-# pkill beacon-chain || echo "No existing beacon-chain processes"
-# pkill validator || echo "No existing validator processes"
-# pkill bootnode || echo "No existing bootnode processes"
+pkill geth || echo "No existing geth processes"
+pkill beacon-chain || echo "No existing beacon-chain processes"
+pkill validator || echo "No existing validator processes"
+pkill bootnode || echo "No existing bootnode processes"
 
 # Set Paths for your binaries. Configure as you wish, particularly
 # if you're developing on a local fork of geth/prysm
@@ -75,21 +75,21 @@ mkdir -p $NETWORK_DIR/bootnode
 
 # $GETH_BOOTNODE_BINARY -genkey $NETWORK_DIR/bootnode/nodekey
 
-$GETH_BOOTNODE_BINARY \
-    -nodekey $NETWORK_DIR/bootnode/nodekey \
-    -addr=:$GETH_BOOTNODE_PORT \
-    -verbosity=5 > "$NETWORK_DIR/bootnode/bootnode.log" 2>&1 &
+# $GETH_BOOTNODE_BINARY \
+#     -nodekey $NETWORK_DIR/bootnode/nodekey \
+#     -addr=:$GETH_BOOTNODE_PORT \
+#     -verbosity=5 > "$NETWORK_DIR/bootnode/bootnode.log" 2>&1 &
 
 sleep 2
 # Get the ENODE from the first line of the logs for the bootnode
-bootnode_enode=$(head -n 1 $NETWORK_DIR/bootnode/bootnode.log)
-# Check if the line begins with "enode"
-if [[ "$bootnode_enode" == enode* ]]; then
-    echo "bootnode enode is: $bootnode_enode"
-else
-    echo "The bootnode enode was not found. Exiting."
-    exit 1
-fi
+# bootnode_enode=$(head -n 1 $NETWORK_DIR/bootnode/bootnode.log)
+# # Check if the line begins with "enode"
+# if [[ "$bootnode_enode" == enode* ]]; then
+#     echo "bootnode enode is: $bootnode_enode"
+# else
+#     echo "The bootnode enode was not found. Exiting."
+#     exit 1
+# fi
 
 
 # Generate the genesis. This will generate validators based
