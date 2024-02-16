@@ -19,7 +19,7 @@ fi
 NETWORK_DIR=./network
 
 # Change this number for your desired number of nodes
-NUM_NODES=2
+NUM_NODES=1
 
 # Port information. All ports will be incremented upon
 # with more validators to prevent port conflicts on a single machine
