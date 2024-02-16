@@ -7,9 +7,6 @@ set -o pipefail
 # including logs and storage
 NETWORK_DIR=./network
 NODE_DIR=$NETWORK_DIR/node0
-mkdir -p $NODE_DIR/execution
-mkdir -p $NODE_DIR/consensus
-mkdir -p $NODE_DIR/logs
 
 # Reset the data from any previous runs and kill any hanging runtimes
 rm -rf "$NETWORK_DIR" || echo "no network directory"
@@ -19,7 +16,9 @@ touch  $NODE_DIR/geth_password.txt
 # We use an empty password. Do not do this in production
 geth_pw_file="$NODE_DIR/geth_password.txt"
 echo "" > "$geth_pw_file"
-
+mkdir -p $NODE_DIR/execution
+mkdir -p $NODE_DIR/consensus
+mkdir -p $NODE_DIR/logs
 # The prysm bootstrap node is set after the first loop, as the first
 # node is the bootstrap node. This is used for consensus client discovery
 PRYSM_BOOTSTRAP_NODE=enr:-MK4QK-P_X6UJq0PB372ylAQFIj78xkp3aCrlhz8Ws-J3TWJMaz7JVk9stUv0wD-AajBN_Y4dA4gpN_xL-Z0UB0TsQyGAY2wnyoEh2F0dG5ldHOIAAAAAAAwAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQLbyVMwJqKaDz7Wz9wsICvxBk8j3keBYnSQjRzacKGgSohzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
