@@ -71,6 +71,8 @@ PRYSM_VALIDATOR_BINARY=./dependencies/prysm/out/validator
 
 # Copy the same genesis and inital config the node's directories
 cp ./config.yml $NODE_DIR/consensus/config.yml
+cp ./genesis.json $NETWORK_DIR
+cp ./genesis.ssz $NETWORK_DIR
 cp $NETWORK_DIR/genesis.ssz $NODE_DIR/consensus/genesis.ssz
 cp $NETWORK_DIR/genesis.json $NODE_DIR/execution/genesis.json
 
