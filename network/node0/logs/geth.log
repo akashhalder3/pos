@@ -1,157 +1,74 @@
-INFO [02-16|11:13:25.454] Maximum peer count                       ETH=50 total=50
-INFO [02-16|11:13:25.456] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
-INFO [02-16|11:13:25.459] Set global gas cap                       cap=50,000,000
-INFO [02-16|11:13:25.459] Initializing the KZG library             backend=gokzg
-INFO [02-16|11:13:25.558] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
-INFO [02-16|11:13:25.558] Using pebble as the backing database
-INFO [02-16|11:13:25.559] Allocated cache and file handles         database=/home/azureuser/pos/network/node0/execution/geth/chaindata cache=512.00MiB handles=524,288
-INFO [02-16|11:13:25.618] Opened ancient database                  database=/home/azureuser/pos/network/node0/execution/geth/chaindata/ancient/chain readonly=false
-INFO [02-16|11:13:25.618] State scheme set to already existing     scheme=hash
-INFO [02-16|11:13:25.619] Initialising Ethereum protocol           network=32382 dbversion=<nil>
-INFO [02-16|11:13:25.623] 
-INFO [02-16|11:13:25.623] ---------------------------------------------------------------------------------------------------------------------------------------------------------
-INFO [02-16|11:13:25.623] Chain ID:  1337 (unknown)
-INFO [02-16|11:13:25.623] Consensus: unknown
-INFO [02-16|11:13:25.623] 
-INFO [02-16|11:13:25.623] Pre-Merge hard forks (block based):
-INFO [02-16|11:13:25.623]  - Homestead:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md)
-INFO [02-16|11:13:25.623]  - Tangerine Whistle (EIP 150): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md)
-INFO [02-16|11:13:25.623]  - Spurious Dragon/1 (EIP 155): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
-INFO [02-16|11:13:25.623]  - Spurious Dragon/2 (EIP 158): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
-INFO [02-16|11:13:25.623]  - Byzantium:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md)
-INFO [02-16|11:13:25.623]  - Constantinople:              #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md)
-INFO [02-16|11:13:25.623]  - Petersburg:                  #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md)
-INFO [02-16|11:13:25.623]  - Istanbul:                    #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md)
-INFO [02-16|11:13:25.623]  - Muir Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md)
-INFO [02-16|11:13:25.623]  - Berlin:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md)
-INFO [02-16|11:13:25.623]  - London:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
-INFO [02-16|11:13:25.623]  - Arrow Glacier:               #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/arrow-glacier.md)
-INFO [02-16|11:13:25.623]  - Gray Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/gray-glacier.md)
-INFO [02-16|11:13:25.623] 
-INFO [02-16|11:13:25.623] Merge configured:
-INFO [02-16|11:13:25.623]  - Hard-fork specification:    https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md
-INFO [02-16|11:13:25.623]  - Network known to be merged: true
-INFO [02-16|11:13:25.623]  - Total terminal difficulty:  0
-INFO [02-16|11:13:25.623] 
-INFO [02-16|11:13:25.623] Post-Merge hard forks (timestamp based):
-INFO [02-16|11:13:25.623]  - Shanghai:                    @1708082013 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
-INFO [02-16|11:13:25.623] 
-INFO [02-16|11:13:25.623] ---------------------------------------------------------------------------------------------------------------------------------------------------------
-INFO [02-16|11:13:25.623] 
-INFO [02-16|11:13:25.623] Loaded most recent local block           number=0 hash=bc8efa..f9cc77 td=1 age=0
-WARN [02-16|11:13:25.623] Failed to load snapshot                  err="missing or corrupted snapshot"
-INFO [02-16|11:13:25.631] Rebuilding state snapshot
-INFO [02-16|11:13:25.634] Initialized transaction indexer          range="last 2350000 blocks"
-INFO [02-16|11:13:25.634] Resuming state snapshot generation       root=4dec33..66b4ca accounts=0 slots=0 storage=0.00B dangling=0 elapsed=2.939ms
-INFO [02-16|11:13:25.634] Regenerated local transaction journal    transactions=0 accounts=0
-INFO [02-16|11:13:25.638] Generated state snapshot                 accounts=5 slots=0 storage=284.00B dangling=0 elapsed=7.219ms
-INFO [02-16|11:13:25.655] Chain post-merge, sync via beacon client
-INFO [02-16|11:13:25.656] Gasprice oracle is ignoring threshold set threshold=2
-WARN [02-16|11:13:25.661] Engine API enabled                       protocol=eth
-INFO [02-16|11:13:25.661] Starting peer-to-peer node               instance=Geth/v1.13.12-stable-02eb36af/linux-amd64/go1.21.6
-INFO [02-16|11:13:25.679] New local node record                    seq=1,708,082,005,678 id=fa39a26cb2cd7717 ip=4.240.105.79 udp=30303 tcp=30303
-INFO [02-16|11:13:25.681] Started P2P networking                   self=enode://1bee6da46268d017f5d7c82efc524a5c1a68288e49417a20c99d7c5e717d5cfcd041fddb941bfcb6140cfea9a3ec6fe3f87071b29ea37465ae710085bed381b2@4.240.105.79:30303
-INFO [02-16|11:13:25.681] IPC endpoint opened                      url=/home/azureuser/pos/network/node0/execution/geth.ipc
-INFO [02-16|11:13:25.681] Generated JWT secret                     path=network/node0/execution/jwtsecret
-INFO [02-16|11:13:25.682] HTTP server started                      endpoint=[::]:8545 auth=false prefix= cors=* vhosts=localhost
-INFO [02-16|11:13:25.682] WebSocket enabled                        url=ws://[::]:8546
-INFO [02-16|11:13:25.682] WebSocket enabled                        url=ws://[::]:8551
-INFO [02-16|11:13:25.682] HTTP server started                      endpoint=[::]:8551 auth=true  prefix= cors=localhost vhosts=*
-INFO [02-16|11:13:35.717] Looking for peers                        peercount=0 tried=104 static=0
-INFO [02-16|11:13:45.358] Starting work on payload                 id=0x0249da0fbf33e6f9
-INFO [02-16|11:13:45.359] Updated payload                          id=0x0249da0fbf33e6f9 number=1 hash=680661..5b1904 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="88.2µs"
-INFO [02-16|11:13:45.360] Stopping work on payload                 id=0x0249da0fbf33e6f9 reason=delivery
-INFO [02-16|11:13:45.918] Looking for peers                        peercount=0 tried=142 static=0
-INFO [02-16|11:13:46.964] Imported new potential chain segment     number=1 hash=680661..5b1904 blocks=1 txs=0 mgas=0.000 elapsed=3.296ms  mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:13:46.967] Left PoW stage
-INFO [02-16|11:13:46.991] Chain head was updated                   number=1 hash=680661..5b1904 root=4dec33..66b4ca elapsed=2.8864ms
-INFO [02-16|11:13:46.995] Indexed transactions                     blocks=2 txs=0 tail=0 elapsed=3.619ms
-INFO [02-16|11:13:47.002] Starting work on payload                 id=0x02ae1f7cb219604f
-INFO [02-16|11:13:47.002] Updated payload                          id=0x02ae1f7cb219604f number=2 hash=572910..f279ac txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="61.8µs"
-INFO [02-16|11:13:56.902] Looking for peers                        peercount=0 tried=76  static=0
-INFO [02-16|11:13:57.333] Stopping work on payload                 id=0x02ae1f7cb219604f reason=delivery
-INFO [02-16|11:13:57.357] Imported new potential chain segment     number=2 hash=572910..f279ac blocks=1 txs=0 mgas=0.000 elapsed=3.724ms  mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:13:57.378] Chain head was updated                   number=2 hash=572910..f279ac root=4dec33..66b4ca elapsed=3.4768ms
-INFO [02-16|11:13:57.384] Starting work on payload                 id=0x02935f8c08ef9c2a
-INFO [02-16|11:13:57.385] Updated payload                          id=0x02935f8c08ef9c2a number=3 hash=bae7a7..8ada13 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="42.3µs"
-INFO [02-16|11:14:06.911] Looking for peers                        peercount=0 tried=101 static=0
-INFO [02-16|11:14:09.327] Stopping work on payload                 id=0x02935f8c08ef9c2a reason=delivery
-INFO [02-16|11:14:09.347] Imported new potential chain segment     number=3 hash=bae7a7..8ada13 blocks=1 txs=0 mgas=0.000 elapsed=3.550ms  mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:14:09.384] Chain head was updated                   number=3 hash=bae7a7..8ada13 root=4dec33..66b4ca elapsed=2.6288ms
-INFO [02-16|11:14:09.389] Starting work on payload                 id=0x026196283fac9820
-INFO [02-16|11:14:09.390] Updated payload                          id=0x026196283fac9820 number=4 hash=6661b9..d1ffea txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="55.3µs"
-INFO [02-16|11:14:17.117] Looking for peers                        peercount=0 tried=158 static=0
-INFO [02-16|11:14:21.291] Stopping work on payload                 id=0x026196283fac9820 reason=delivery
-INFO [02-16|11:14:21.339] Imported new potential chain segment     number=4 hash=6661b9..d1ffea blocks=1 txs=0 mgas=0.000 elapsed=8.924ms  mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:14:21.359] Chain head was updated                   number=4 hash=6661b9..d1ffea root=4dec33..66b4ca elapsed=4.0524ms
-INFO [02-16|11:14:21.367] Starting work on payload                 id=0x02f886058e3c5019
-INFO [02-16|11:14:21.367] Updated payload                          id=0x02f886058e3c5019 number=5 hash=5946a7..adcdc4 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="104.8µs"
-INFO [02-16|11:14:27.119] Looking for peers                        peercount=1 tried=94  static=0
-INFO [02-16|11:14:33.349] Stopping work on payload                 id=0x02f886058e3c5019 reason=delivery
-INFO [02-16|11:14:33.367] Imported new potential chain segment     number=5 hash=5946a7..adcdc4 blocks=1 txs=0 mgas=0.000 elapsed=4.816ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:14:33.411] Chain head was updated                   number=5 hash=5946a7..adcdc4 root=4dec33..66b4ca elapsed=3.3394ms
-INFO [02-16|11:14:33.419] Starting work on payload                 id=0x0220e7583b013363
-INFO [02-16|11:14:33.420] Updated payload                          id=0x0220e7583b013363 number=6 hash=f45a95..fe3286 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="38.3µs"
-INFO [02-16|11:14:37.124] Looking for peers                        peercount=0 tried=139 static=0
-INFO [02-16|11:14:45.316] Stopping work on payload                 id=0x0220e7583b013363 reason=delivery
-INFO [02-16|11:14:45.365] Imported new potential chain segment     number=6 hash=f45a95..fe3286 blocks=1 txs=0 mgas=0.000 elapsed=3.161ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:14:45.400] Chain head was updated                   number=6 hash=f45a95..fe3286 root=4dec33..66b4ca elapsed=2.4957ms
-INFO [02-16|11:14:45.406] Starting work on payload                 id=0x022c22cb9a26eb37
-INFO [02-16|11:14:45.407] Updated payload                          id=0x022c22cb9a26eb37 number=7 hash=24ae07..c065b4 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="51.3µs"
-INFO [02-16|11:14:47.232] Looking for peers                        peercount=0 tried=125 static=0
-INFO [02-16|11:14:57.262] Stopping work on payload                 id=0x022c22cb9a26eb37 reason=delivery
-INFO [02-16|11:14:57.338] Imported new potential chain segment     number=7 hash=24ae07..c065b4 blocks=1 txs=0 mgas=0.000 elapsed=6.488ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:14:57.341] Looking for peers                        peercount=0 tried=69  static=0
-INFO [02-16|11:14:57.401] Chain head was updated                   number=7 hash=24ae07..c065b4 root=4dec33..66b4ca elapsed=2.657ms
-INFO [02-16|11:14:57.407] Starting work on payload                 id=0x02676c69fc449a79
-INFO [02-16|11:14:57.407] Updated payload                          id=0x02676c69fc449a79 number=8 hash=d21a6c..caedc7 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="58.2µs"
-INFO [02-16|11:15:07.363] Looking for peers                        peercount=0 tried=110 static=0
-INFO [02-16|11:15:09.252] Stopping work on payload                 id=0x02676c69fc449a79 reason=delivery
-INFO [02-16|11:15:09.343] Imported new potential chain segment     number=8 hash=d21a6c..caedc7 blocks=1 txs=0 mgas=0.000 elapsed=4.422ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:15:09.380] Chain head was updated                   number=8 hash=d21a6c..caedc7 root=4dec33..66b4ca elapsed=3.6344ms
-INFO [02-16|11:15:09.386] Starting work on payload                 id=0x0244fcac2857d56f
-INFO [02-16|11:15:09.386] Updated payload                          id=0x0244fcac2857d56f number=9 hash=060536..c0c3d8 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="30.7µs"
-WARN [02-16|11:15:14.064] Served eth_coinbase                      conn=194.67.206.46:33340 reqid=2 duration="171.5µs" err="etherbase must be explicitly specified"
-INFO [02-16|11:15:17.399] Looking for peers                        peercount=0 tried=140 static=0
-INFO [02-16|11:15:21.280] Stopping work on payload                 id=0x0244fcac2857d56f reason=delivery
-INFO [02-16|11:15:21.351] Imported new potential chain segment     number=9 hash=060536..c0c3d8 blocks=1 txs=0 mgas=0.000 elapsed=3.489ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:15:21.372] Chain head was updated                   number=9 hash=060536..c0c3d8 root=4dec33..66b4ca elapsed=2.6311ms
-INFO [02-16|11:15:21.376] Starting work on payload                 id=0x023f32c278fc7393
-INFO [02-16|11:15:21.377] Updated payload                          id=0x023f32c278fc7393 number=10 hash=d5cc30..72feb1 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="49µs"
-INFO [02-16|11:15:27.404] Looking for peers                        peercount=1 tried=57  static=0
-INFO [02-16|11:15:33.233] Stopping work on payload                 id=0x023f32c278fc7393 reason=delivery
-INFO [02-16|11:15:33.345] Imported new potential chain segment     number=10 hash=d5cc30..72feb1 blocks=1 txs=0 mgas=0.000 elapsed=4.201ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:15:33.367] Chain head was updated                   number=10 hash=d5cc30..72feb1 root=4dec33..66b4ca elapsed=3.9962ms
-INFO [02-16|11:15:33.372] Starting work on payload                 id=0x0259120ff41ac9bf
-INFO [02-16|11:15:33.373] Updated payload                          id=0x0259120ff41ac9bf number=11 hash=5f6af4..38eac1 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="32.1µs"
-INFO [02-16|11:15:37.526] Looking for peers                        peercount=0 tried=130 static=0
-INFO [02-16|11:15:45.299] Stopping work on payload                 id=0x0259120ff41ac9bf reason=delivery
-INFO [02-16|11:15:45.353] Imported new potential chain segment     number=11 hash=5f6af4..38eac1 blocks=1 txs=0 mgas=0.000 elapsed=10.719ms  mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:15:45.372] Chain head was updated                   number=11 hash=5f6af4..38eac1 root=4dec33..66b4ca elapsed=3.2014ms
-INFO [02-16|11:15:45.382] Starting work on payload                 id=0x024bdc6a83b2acef
-INFO [02-16|11:15:45.382] Updated payload                          id=0x024bdc6a83b2acef number=12 hash=5b3815..72093d txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="55µs"
-INFO [02-16|11:15:47.553] Looking for peers                        peercount=2 tried=119 static=0
-INFO [02-16|11:15:57.354] Stopping work on payload                 id=0x024bdc6a83b2acef reason=delivery
-INFO [02-16|11:15:57.388] Imported new potential chain segment     number=12 hash=5b3815..72093d blocks=1 txs=0 mgas=0.000 elapsed=4.109ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:15:57.411] Chain head was updated                   number=12 hash=5b3815..72093d root=4dec33..66b4ca elapsed=3.4294ms
-INFO [02-16|11:15:57.418] Starting work on payload                 id=0x020d3c7ea4adcf38
-INFO [02-16|11:15:57.418] Updated payload                          id=0x020d3c7ea4adcf38 number=13 hash=310418..434e6b txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="63.5µs"
-INFO [02-16|11:15:57.899] Looking for peers                        peercount=0 tried=91  static=0
-INFO [02-16|11:16:08.095] Looking for peers                        peercount=0 tried=169 static=0
-INFO [02-16|11:16:09.258] Stopping work on payload                 id=0x020d3c7ea4adcf38 reason=delivery
-INFO [02-16|11:16:09.357] Imported new potential chain segment     number=13 hash=310418..434e6b blocks=1 txs=0 mgas=0.000 elapsed=3.462ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:16:09.381] Chain head was updated                   number=13 hash=310418..434e6b root=4dec33..66b4ca elapsed=3.7056ms
-INFO [02-16|11:16:09.388] Starting work on payload                 id=0x02867c6aa032dc75
-INFO [02-16|11:16:09.388] Updated payload                          id=0x02867c6aa032dc75 number=14 hash=34ccf7..ad1c69 txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="58.9µs"
-INFO [02-16|11:16:18.198] Looking for peers                        peercount=1 tried=82  static=0
-INFO [02-16|11:16:21.388] Stopping work on payload                 id=0x02867c6aa032dc75 reason=timeout
-INFO [02-16|11:16:21.556] Imported new potential chain segment     number=14 hash=34ccf7..ad1c69 blocks=1 txs=0 mgas=0.000 elapsed=7.875ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:16:21.595] Chain head was updated                   number=14 hash=34ccf7..ad1c69 root=4dec33..66b4ca elapsed=4.3813ms
-INFO [02-16|11:16:21.601] Starting work on payload                 id=0x02c49d12e27cbcfe
-INFO [02-16|11:16:21.601] Updated payload                          id=0x02c49d12e27cbcfe number=15 hash=095d63..3a53fe txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="39.6µs"
-INFO [02-16|11:16:28.557] Looking for peers                        peercount=0 tried=132 static=0
-INFO [02-16|11:16:33.538] Stopping work on payload                 id=0x02c49d12e27cbcfe reason=delivery
-INFO [02-16|11:16:33.590] Imported new potential chain segment     number=15 hash=095d63..3a53fe blocks=1 txs=0 mgas=0.000 elapsed=4.351ms   mgasps=0.000 triedirty=0.00B
-INFO [02-16|11:16:33.628] Chain head was updated                   number=15 hash=095d63..3a53fe root=4dec33..66b4ca elapsed=11.0448ms
-INFO [02-16|11:16:33.640] Starting work on payload                 id=0x02025b76be1a74de
-INFO [02-16|11:16:33.640] Updated payload                          id=0x02025b76be1a74de number=16 hash=623ed1..7e99fc txs=0 withdrawals=0 gas=0 fees=0 root=4dec33..66b4ca elapsed="58.8µs"
+INFO [02-16|11:47:39.323] Maximum peer count                       ETH=50 total=50
+INFO [02-16|11:47:39.325] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-16|11:47:39.329] Set global gas cap                       cap=50,000,000
+INFO [02-16|11:47:39.329] Initializing the KZG library             backend=gokzg
+INFO [02-16|11:47:39.431] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [02-16|11:47:39.431] Using pebble as the backing database
+INFO [02-16|11:47:39.431] Allocated cache and file handles         database=/home/azureuser/pos/network/node0/execution/geth/chaindata cache=512.00MiB handles=524,288
+INFO [02-16|11:47:39.490] Opened ancient database                  database=/home/azureuser/pos/network/node0/execution/geth/chaindata/ancient/chain readonly=false
+INFO [02-16|11:47:39.490] State scheme set to already existing     scheme=hash
+INFO [02-16|11:47:39.491] Initialising Ethereum protocol           network=32382 dbversion=<nil>
+INFO [02-16|11:47:39.494] 
+INFO [02-16|11:47:39.494] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [02-16|11:47:39.494] Chain ID:  1337 (unknown)
+INFO [02-16|11:47:39.494] Consensus: unknown
+INFO [02-16|11:47:39.494] 
+INFO [02-16|11:47:39.494] Pre-Merge hard forks (block based):
+INFO [02-16|11:47:39.494]  - Homestead:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md)
+INFO [02-16|11:47:39.494]  - Tangerine Whistle (EIP 150): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md)
+INFO [02-16|11:47:39.494]  - Spurious Dragon/1 (EIP 155): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
+INFO [02-16|11:47:39.494]  - Spurious Dragon/2 (EIP 158): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
+INFO [02-16|11:47:39.494]  - Byzantium:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md)
+INFO [02-16|11:47:39.494]  - Constantinople:              #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md)
+INFO [02-16|11:47:39.494]  - Petersburg:                  #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md)
+INFO [02-16|11:47:39.494]  - Istanbul:                    #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md)
+INFO [02-16|11:47:39.494]  - Muir Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md)
+INFO [02-16|11:47:39.494]  - Berlin:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md)
+INFO [02-16|11:47:39.494]  - London:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
+INFO [02-16|11:47:39.494]  - Arrow Glacier:               #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/arrow-glacier.md)
+INFO [02-16|11:47:39.494]  - Gray Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/gray-glacier.md)
+INFO [02-16|11:47:39.494] 
+INFO [02-16|11:47:39.494] Merge configured:
+INFO [02-16|11:47:39.494]  - Hard-fork specification:    https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md
+INFO [02-16|11:47:39.494]  - Network known to be merged: true
+INFO [02-16|11:47:39.494]  - Total terminal difficulty:  0
+INFO [02-16|11:47:39.494] 
+INFO [02-16|11:47:39.494] Post-Merge hard forks (timestamp based):
+INFO [02-16|11:47:39.494]  - Shanghai:                    @1708084058 (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+INFO [02-16|11:47:39.494] 
+INFO [02-16|11:47:39.494] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [02-16|11:47:39.494] 
+INFO [02-16|11:47:39.494] Loaded most recent local block           number=0 hash=8e7307..324f19 td=1 age=1s
+WARN [02-16|11:47:39.494] Failed to load snapshot                  err="missing or corrupted snapshot"
+INFO [02-16|11:47:39.500] Rebuilding state snapshot
+INFO [02-16|11:47:39.503] Initialized transaction indexer          range="last 2350000 blocks"
+INFO [02-16|11:47:39.503] Resuming state snapshot generation       root=d16ff4..8ecb6a accounts=0 slots=0 storage=0.00B dangling=0 elapsed=2.781ms
+INFO [02-16|11:47:39.503] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-16|11:47:39.507] Generated state snapshot                 accounts=4 slots=0 storage=236.00B dangling=0 elapsed=6.952ms
+INFO [02-16|11:47:39.521] Chain post-merge, sync via beacon client
+INFO [02-16|11:47:39.521] Gasprice oracle is ignoring threshold set threshold=2
+WARN [02-16|11:47:39.525] Engine API enabled                       protocol=eth
+INFO [02-16|11:47:39.525] Starting peer-to-peer node               instance=Geth/v1.13.12-stable-02eb36af/linux-amd64/go1.21.6
+INFO [02-16|11:47:39.542] New local node record                    seq=1,708,084,059,541 id=49aec57983cafaca ip=4.240.105.79 udp=30303 tcp=30303
+INFO [02-16|11:47:39.543] Started P2P networking                   self=enode://21d9b2981dcd5ee54a976aa624c1e6a646a0207bc3fbfd3e8beee9d5e606fe9ef397e5d209ca43f5f0ec78441d34b6322001440188c54bda06e931863c5f1b59@4.240.105.79:30303
+INFO [02-16|11:47:39.544] IPC endpoint opened                      url=/home/azureuser/pos/network/node0/execution/geth.ipc
+INFO [02-16|11:47:39.544] Generated JWT secret                     path=network/node0/execution/jwtsecret
+INFO [02-16|11:47:39.544] HTTP server started                      endpoint=[::]:8545 auth=false prefix= cors=* vhosts=localhost
+INFO [02-16|11:47:39.545] WebSocket enabled                        url=ws://[::]:8546
+INFO [02-16|11:47:39.545] WebSocket enabled                        url=ws://[::]:8551
+INFO [02-16|11:47:39.545] HTTP server started                      endpoint=[::]:8551 auth=true  prefix= cors=localhost vhosts=*
+WARN [02-16|11:47:39.676] Served eth_feeHistory                    conn=202.142.110.215:45579 reqid=3808231668196655 duration="78.2µs" err="request beyond head block: requested 163, head 0"
+WARN [02-16|11:47:47.484] Served eth_feeHistory                    conn=202.142.110.215:20854 reqid=3808231668196659 duration="61.3µs" err="request beyond head block: requested 163, head 0"
+INFO [02-16|11:47:50.413] Starting work on payload                 id=0x02f3eea74ed71cb7
+INFO [02-16|11:47:50.414] Updated payload                          id=0x02f3eea74ed71cb7 number=1 hash=b22c13..f18295 txs=0 withdrawals=0 gas=0 fees=0 root=d16ff4..8ecb6a elapsed="63.3µs"
+INFO [02-16|11:47:50.414] Stopping work on payload                 id=0x02f3eea74ed71cb7 reason=delivery
+INFO [02-16|11:47:50.459] Imported new potential chain segment     number=1 hash=b22c13..f18295 blocks=1 txs=0 mgas=0.000 elapsed=3.359ms  mgasps=0.000 triedirty=0.00B
+INFO [02-16|11:47:50.462] Left PoW stage
+INFO [02-16|11:47:50.496] Chain head was updated                   number=1 hash=b22c13..f18295 root=d16ff4..8ecb6a elapsed=2.6543ms
+INFO [02-16|11:47:50.500] Indexed transactions                     blocks=2 txs=0 tail=0 elapsed=3.247ms
+INFO [02-16|11:47:50.503] Starting work on payload                 id=0x028513d75f3e1a00
+INFO [02-16|11:47:50.503] Updated payload                          id=0x028513d75f3e1a00 number=2 hash=d6d3c5..20793a txs=0 withdrawals=0 gas=0 fees=0 root=d16ff4..8ecb6a elapsed="71.9µs"
+WARN [02-16|11:47:53.012] Served eth_getBalance                    conn=202.142.110.215:20854 reqid=1442721031 duration="181µs" err="header not found"
+WARN [02-16|11:47:53.103] Served eth_getBalance                    conn=202.142.110.215:20854 reqid=1442721033 duration="151.1µs" err="header not found"
+WARN [02-16|11:47:57.464] Served eth_feeHistory                    conn=202.142.110.215:20854 reqid=3808231668196663 duration="66µs" err="request beyond head block: requested 163, head 1"
+INFO [02-16|11:47:59.617] Looking for peers                        peercount=0 tried=102 static=0
