@@ -50,11 +50,11 @@ PRYSM_VALIDATOR_BINARY=./dependencies/prysm/out/validator
 $GETH_BINARY \
       --networkid=${CHAIN_ID:-32382} \
       --http \
-      --http.api=eth,net,web3 \
+      --http.api=eth,net,web3,txpool,debug \
       --http.addr=0.0.0.0 \
       --http.corsdomain="*" \
       --ws \
-      --ws.api=eth,net,web3 \
+      --ws.api=eth,net,web3,txpool,debug \
       --ws.addr=0.0.0.0 \
       --ws.origins="*" \
       --authrpc.vhosts="*" \

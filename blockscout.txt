@@ -1,0 +1,8 @@
+export ETHEREUM_JSONRPC_VARIANT=geth
+export ETHEREUM_JSONRPC_HTTP_URL=http://localhost:8545
+export API_V2_ENABLED=true
+export PORT=3000 # set for local API usage
+export COIN=yourcoin
+export COIN_NAME=yourcoinname
+export DISPLAY_TOKEN_ICONS=true
+export DATABASE_URL=postgresql://dbuser:1234@localhost:5432/blockscout

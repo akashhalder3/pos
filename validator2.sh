@@ -13,8 +13,7 @@ echo "" > "$geth_pw_file"
 
 # The prysm bootstrap node is set after the first loop, as the first
 # node is the bootstrap node. This is used for consensus client discovery
-PRYSM_BOOTSTRAP_NODE=enr:-MK4QPeAb8Cv3jXoxeufznBt3DDrZqB9WCE1Ukm-FcshVXPnTC_GrUMaOvo0KoqBnw374Q6WC69Z56ulWYypnwMmQ1qGAY2r4c4jh2F0dG5ldHOIAAAAgAEAAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQOjgo9rtH9wyMLGHOAaOH6Z73BX8UYlfSDdlrz8njYyeYhzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
-
+PRYSM_BOOTSTRAP_NODE=enr:-MK4QB5TKsQR9Q-ZbdBd7WyjzD13muwtW41EFmXBnEwmZCYKdOEykZm5O_VwLK2fhOT0LX4BYgvYT2vyIvf3VrDDmDqGAY2s_4SKh2F0dG5ldHOIAAAAAAAMAACEZXRoMpBa8xKTIAAAk___________gmlkgnY0gmlwhATwaU-Jc2VjcDI1NmsxoQKF2HWxFPvQBK0LU3q-67vcuwZj3SH8e0caR2bs6DHZ34hzeW5jbmV0cw-DdGNwgjLIg3VkcIIu4A
 # Change this number for your desired number of nodes
 NUM_NODES=64
 
@@ -50,11 +49,11 @@ PRYSM_VALIDATOR_BINARY=./dependencies/prysm/out/validator
 $GETH_BINARY \
       --networkid=${CHAIN_ID:-32382} \
       --http \
-      --http.api=eth,net,web3 \
+      --http.api=eth,net,web3,txpool,debug \
       --http.addr=0.0.0.0 \
       --http.corsdomain="*" \
       --ws \
-      --ws.api=eth,net,web3 \
+      --ws.api=eth,net,web3,txpool,debug \
       --ws.addr=0.0.0.0 \
       --ws.origins="*" \
       --authrpc.vhosts="*" \
