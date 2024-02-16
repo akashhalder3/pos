@@ -48,7 +48,7 @@ PRYSM_VALIDATOR_BINARY=./dependencies/prysm/out/validator
 
 # Start geth execution client for this node
 $GETH_BINARY \
-      --networkid=${CHAIN_ID:-32382} \
+      --networkid=${CHAIN_ID:-13371} \
       --http \
       --http.api=eth,net,web3,txpool,debug \
       --http.addr=0.0.0.0 \
@@ -77,7 +77,7 @@ $PRYSM_BEACON_BINARY \
       --interop-eth1data-votes \
       --chain-config-file=$NODE_DIR/consensus/config.yml \
       --contract-deployment-block=0 \
-      --chain-id=${CHAIN_ID:-32382} \
+      --chain-id=${CHAIN_ID:-13371} \
       --rpc-host=0.0.0.0 \
       --grpc-gateway-host=0.0.0.0 \
       --execution-endpoint=http://0.0.0.0:8551 \
